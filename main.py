@@ -4,10 +4,10 @@ import random
 app = FastAPI()
 
 
-@app.get("/helloworld")
+@app.get("/olamundo")
 def read_root():
-    return {"Hello": "World"}
+    return {"ola": "mundo"}
 
-@app.get("/funcaoteste")
+@app.get("/numerorandom")
 def funcaoteste():
     return {"teste": True, "num_aleatorio":random.randint(1,1000)}
