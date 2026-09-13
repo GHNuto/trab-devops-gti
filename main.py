@@ -3,9 +3,9 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("/helloworld")
+@app.get("/olamundo")
 def read_root():
-    return {"Hello": "World"}
+    return {"ola": "mundo"}
 
 @app.get("/numerorandom")
 def funcaoteste():
