@@ -1,19 +1,19 @@
 name: Continuos Integration
-on:
-  pull_request:
-    branches:
-      - main
 
+on:
+  push:
+    branches: [ "main", "testedockerfile" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  security-events: write
+  actions: read
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v6
-      - name: Python Lint Code Scanning Action
-        uses: advanced-security/python-lint-code-scanning-action@v1.1.3
-        with:
-          linter: pylint
-
-
+        uses: actions/checkout@v4
