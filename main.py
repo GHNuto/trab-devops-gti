@@ -7,6 +7,6 @@ app = FastAPI()
 def read_root():
     return {"Hello": "World"}
 
-@app.get("/funcaoteste")
+@app.get("/numerorandom")
 def funcaoteste():
     return {"teste": "deucerto"}
