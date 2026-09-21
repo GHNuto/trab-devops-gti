@@ -6,7 +6,7 @@ def test_root():
     result = read_root()
     yield
     assert result == {"ola": "mundo"}
-
+#so pra ativar a pr
 
 def test_funcaoteste():
     with patch('src.main.random.randint', return_value=12345):
